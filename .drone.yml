@@ -1,0 +1,12 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: install-and-tests
+  image: cpp
+  pull: never
+  commands:
+  - cmake .
+  - make
+  - ./Task2Tests
